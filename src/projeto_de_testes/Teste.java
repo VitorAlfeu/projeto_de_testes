@@ -1,8 +1,7 @@
 package projeto_de_testes;
 
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.List;
+import java.text.ParseException;
+import java.text.SimpleDateFormat;
 
 public class Teste {
 	public static void main(String[] args){
@@ -29,6 +28,15 @@ public class Teste {
 //		}
 		
 		//COLOCANDO STRING DENTRO DE STRING
-		System.out.println("O campo \"asdasdsadasd\" não pode ser vazio.");
+		//System.out.println("O campo \"asdasdsadasd\" não pode ser vazio.");
+
+		String strDate = "2019/01/31";
+		SimpleDateFormat dateFormat = new SimpleDateFormat("yyyy-MM-dd");
+		try {
+			 dateFormat.setLenient(false);
+			 dateFormat.parse(strDate);
+		 } catch (ParseException e) {
+			 System.out.println("Data inválida");
+		 }
 	}
 }
