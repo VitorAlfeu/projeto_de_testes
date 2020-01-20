@@ -1,8 +1,11 @@
 package projeto_de_testes;
 
+import java.nio.charset.Charset;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.Date;
+import java.util.Random;
+import java.util.UUID;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
@@ -56,12 +59,31 @@ public class Teste {
 //			System.out.println(palavra.charAt(i));
 //		}
 		
-		//Validando CARACTERES ESPECIAIS
-		String caracteresValidos = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ_123456789";		
-		String palavra = "Vitorï";
-		for (int i = 0; i < palavra.length(); i++) {
-			System.out.println(caracteresValidos.contains(String.valueOf(palavra.charAt(i))));
+//		//Validando CARACTERES ESPECIAIS
+//		String caracteresValidos = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ_0123456789";		
+//		String palavra = "Vitorï";
+//		for (int i = 0; i < palavra.length(); i++) {
+//			System.out.println(caracteresValidos.contains(String.valueOf(palavra.charAt(i))));
+//		}
+
+//		//Método para criação de String aleatória
+//		UUID uuid = UUID.randomUUID();
+//		String stringRandom = uuid.toString(); 
+//		System.out.println(stringRandom);
+		
+//		//Método para criação de String aleatória 2
+//	    byte[] array = new byte[6]; // length is bounded by 7
+//	    new Random().nextBytes(array);
+//	    String generatedString = new String(array, Charset.forName("UTF-8"));
+//		System.out.println(generatedString);
+		
+		Random random = new Random();
+		String codConfirm = "";
+		for (int i = 0; i< 6; i++) {
+			codConfirm += String.valueOf((random.nextInt(9))); 
 		}
-			
+		
+		System.out.println(codConfirm);
+		
 	}
 }
