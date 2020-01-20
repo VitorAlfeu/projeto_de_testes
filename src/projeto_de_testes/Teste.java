@@ -17,18 +17,18 @@ public class Teste {
 //		if (nomess.contains("joao")) {
 //			System.out.println("foi");
 //		} else {
-//			System.out.println("não foi");
+//			System.out.println("nï¿½o foi");
 //		}
 		
 //		String teste = "TDM", teste2 = "Tdm";
 //		if (teste.toUpperCase().contains(teste2.toUpperCase())) {
 //			System.out.println("Sim");
 //		} else {
-//			System.out.println("Não");
+//			System.out.println("Nï¿½o");
 //		}
 		
 		//COLOCANDO STRING DENTRO DE STRING
-		//System.out.println("O campo \"asdasdsadasd\" não pode ser vazio.");
+		//System.out.println("O campo \"asdasdsadasd\" nï¿½o pode ser vazio.");
 
 		String strDate = "2019/01/31";
 		SimpleDateFormat dateFormat = new SimpleDateFormat("yyyy-MM-dd");
@@ -36,7 +36,7 @@ public class Teste {
 			 dateFormat.setLenient(false);
 			 dateFormat.parse(strDate);
 		 } catch (ParseException e) {
-			 System.out.println("Data inválida");
+			 System.out.println("Data invÃ¡lida");
 		 }
 	}
 }
