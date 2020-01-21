@@ -77,13 +77,46 @@ public class Teste {
 //	    String generatedString = new String(array, Charset.forName("UTF-8"));
 //		System.out.println(generatedString);
 		
-		Random random = new Random();
-		String codConfirm = "";
-		for (int i = 0; i< 6; i++) {
-			codConfirm += String.valueOf((random.nextInt(9))); 
+//		Random random = new Random();
+//		String codConfirm = "";
+//		for (int i = 0; i< 6; i++) {
+//			codConfirm += String.valueOf((random.nextInt(9))); 
+//		}
+//		
+//		System.out.println(codConfirm);
+
+//		//Gerar String aleatória entre Letras e Números somente
+//		final char[] ALL_CHARS = new char[62];
+//		final Random RANDOM = new Random();
+//
+//		for (int i = 48, j = 0; i < 127; i++) {
+//			if (Character.isLetterOrDigit(i)) {
+//				ALL_CHARS[j] = (char) i;
+//				j++;
+//			}
+//		}
+//
+//		final char[] result = new char[tamanho];
+//		for (int i = 0; i < tamanho; i++) {
+//			result[i] = ALL_CHARS[RANDOM.nextInt(ALL_CHARS.length)];
+//		}
+
+		
+		//Gerar String aleatória com todas as Strings incluindo Caracteres especiais
+		int tamanho = 8;
+		final char[] ALL_CHARS = new char[94];
+		final Random RANDOM = new Random();
+
+		for (int i = 33, j = 0; i < 127; i++, j++) {
+			ALL_CHARS[j] = (char) i;
+		}
+
+		final char[] result = new char[tamanho];
+		for (int i = 0; i < tamanho; i++) {
+			result[i] = ALL_CHARS[RANDOM.nextInt(ALL_CHARS.length)];
 		}
 		
-		System.out.println(codConfirm);
-		
+		System.out.println(String.valueOf(result));
+				
 	}
 }
