@@ -1,13 +1,7 @@
 package projeto_de_testes;
 
-import java.nio.charset.Charset;
 import java.text.ParseException;
-import java.text.SimpleDateFormat;
-import java.util.Date;
 import java.util.Random;
-import java.util.UUID;
-import java.util.regex.Matcher;
-import java.util.regex.Pattern;
 
 public class Teste {
 	public static void main(String[] args) throws ParseException{
@@ -23,18 +17,18 @@ public class Teste {
 //		if (nomess.contains("joao")) {
 //			System.out.println("foi");
 //		} else {
-//			System.out.println("não foi");
+//			System.out.println("nï¿½o foi");
 //		}
 		
 //		String teste = "TDM", teste2 = "Tdm";
 //		if (teste.toUpperCase().contains(teste2.toUpperCase())) {
 //			System.out.println("Sim");
 //		} else {
-//			System.out.println("Não");
+//			System.out.println("Nï¿½o");
 //		}
 		
 		//COLOCANDO STRING DENTRO DE STRING
-		//System.out.println("O campo \"asdasdsadasd\" não pode ser vazio.");
+		//System.out.println("O campo \"asdasdsadasd\" nï¿½o pode ser vazio.");
 
 //		String strDate = "2019/01/31";
 //		SimpleDateFormat dateFormat = new SimpleDateFormat("yyyy-MM-dd");
@@ -42,10 +36,10 @@ public class Teste {
 //			 dateFormat.setLenient(false);
 //			 dateFormat.parse(strDate);
 //		 } catch (ParseException e) {
-//			 System.out.println("Data inválida");
+//			 System.out.println("Data invï¿½lida");
 //		 }
 		
-//		//Testando variável genérica, ou seja, sem tipo
+//		//Testando variï¿½vel genï¿½rica, ou seja, sem tipo
 //		SimpleDateFormat dateFormat = new SimpleDateFormat("yyyy-MM-dd hh:mm:ss");
 //		Date dataHr = dateFormat.parse("2019-01-01 00:00:00");
 //		Object o = dataHr;
@@ -61,17 +55,17 @@ public class Teste {
 		
 //		//Validando CARACTERES ESPECIAIS
 //		String caracteresValidos = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ_0123456789";		
-//		String palavra = "Vitorï";
+//		String palavra = "Vitorï¿½";
 //		for (int i = 0; i < palavra.length(); i++) {
 //			System.out.println(caracteresValidos.contains(String.valueOf(palavra.charAt(i))));
 //		}
 
-//		//Método para criação de String aleatória
+//		//Mï¿½todo para criaï¿½ï¿½o de String aleatï¿½ria
 //		UUID uuid = UUID.randomUUID();
 //		String stringRandom = uuid.toString(); 
 //		System.out.println(stringRandom);
 		
-//		//Método para criação de String aleatória 2
+//		//Mï¿½todo para criaï¿½ï¿½o de String aleatï¿½ria 2
 //	    byte[] array = new byte[6]; // length is bounded by 7
 //	    new Random().nextBytes(array);
 //	    String generatedString = new String(array, Charset.forName("UTF-8"));
@@ -101,7 +95,6 @@ public class Teste {
 //			result[i] = ALL_CHARS[RANDOM.nextInt(ALL_CHARS.length)];
 //		}
 
-		
 		//Gerar String aleatória com todas as Strings incluindo Caracteres especiais
 		int tamanho = 8;
 		final char[] ALL_CHARS = new char[94];
@@ -116,7 +109,6 @@ public class Teste {
 			result[i] = ALL_CHARS[RANDOM.nextInt(ALL_CHARS.length)];
 		}
 		
-		System.out.println(String.valueOf(result));
-				
+		System.out.println(String.valueOf(result));			
 	}
 }
