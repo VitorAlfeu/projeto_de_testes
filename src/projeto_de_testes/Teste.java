@@ -1,7 +1,9 @@
 package projeto_de_testes;
 
 import java.text.ParseException;
-import java.util.Random;
+import java.text.SimpleDateFormat;
+import java.time.Period;
+import java.util.Date;
 
 public class Teste {
 	public static void main(String[] args) throws ParseException{
@@ -79,7 +81,7 @@ public class Teste {
 //		
 //		System.out.println(codConfirm);
 
-//		//Gerar String aleatória entre Letras e Números somente
+//		//Gerar String aleatï¿½ria entre Letras e Nï¿½meros somente
 //		final char[] ALL_CHARS = new char[62];
 //		final Random RANDOM = new Random();
 //
@@ -95,20 +97,38 @@ public class Teste {
 //			result[i] = ALL_CHARS[RANDOM.nextInt(ALL_CHARS.length)];
 //		}
 
-		//Gerar String aleatória com todas as Strings incluindo Caracteres especiais
-		int tamanho = 8;
-		final char[] ALL_CHARS = new char[94];
-		final Random RANDOM = new Random();
-
-		for (int i = 33, j = 0; i < 127; i++, j++) {
-			ALL_CHARS[j] = (char) i;
-		}
-
-		final char[] result = new char[tamanho];
-		for (int i = 0; i < tamanho; i++) {
-			result[i] = ALL_CHARS[RANDOM.nextInt(ALL_CHARS.length)];
-		}
+//		//Gerar String aleatï¿½ria com todas as Strings incluindo Caracteres especiais
+//		int tamanho = 8;
+//		final char[] ALL_CHARS = new char[94];
+//		final Random RANDOM = new Random();
+//
+//		for (int i = 33, j = 0; i < 127; i++, j++) {
+//			ALL_CHARS[j] = (char) i;
+//		}
+//
+//		final char[] result = new char[tamanho];
+//		for (int i = 0; i < tamanho; i++) {
+//			result[i] = ALL_CHARS[RANDOM.nextInt(ALL_CHARS.length)];
+//		}
+//		
+//		System.out.println(String.valueOf(result));
 		
-		System.out.println(String.valueOf(result));			
+		Date dataInicial, dataFinal;
+		SimpleDateFormat dateFormatDtHr = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
+		SimpleDateFormat dateFormatInt = new SimpleDateFormat("HHmmss");
+		
+		
+		dataInicial = dateFormatDtHr.parse("2020-01-21 20:00:00");
+		dataFinal = dateFormatDtHr.parse("2020-01-21 20:21:00");
+		
+		int dataInicialInt = Integer.valueOf(dateFormatInt.format(dataInicial));
+		int dataFinalInt = Integer.valueOf(dateFormatInt.format(dataFinal));
+		
+		System.out.println(dataInicialInt);
+		System.out.println(dataFinalInt);
+		System.out.println((dataFinalInt - dataInicialInt));
+		System.out.println((dataFinalInt - dataInicialInt) > 2000);
+		
+		
 	}
 }
