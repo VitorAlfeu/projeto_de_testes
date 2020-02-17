@@ -2,8 +2,8 @@ package projeto_de_testes;
 
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
-import java.time.Period;
 import java.util.Date;
+import java.util.TimeZone;
 
 public class Teste {
 	public static void main(String[] args) throws ParseException{
@@ -113,22 +113,84 @@ public class Teste {
 //		
 //		System.out.println(String.valueOf(result));
 		
-		Date dataInicial, dataFinal;
-		SimpleDateFormat dateFormatDtHr = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
-		SimpleDateFormat dateFormatInt = new SimpleDateFormat("HHmmss");
+//		Date dataInicial, dataFinal;
+//		SimpleDateFormat dateFormatDtHr = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
+//		SimpleDateFormat dateFormatInt = new SimpleDateFormat("HHmmss");
+//		
+//		
+//		dataInicial = dateFormatDtHr.parse("2020-01-21 20:00:00");
+//		dataFinal = dateFormatDtHr.parse("2020-01-21 20:21:00");
+//		
+//		int dataInicialInt = Integer.valueOf(dateFormatInt.format(dataInicial));
+//		int dataFinalInt = Integer.valueOf(dateFormatInt.format(dataFinal));
+//		
+//		System.out.println(dataInicialInt);
+//		System.out.println(dataFinalInt);
+//		System.out.println((dataFinalInt - dataInicialInt));
+//		System.out.println((dataFinalInt - dataInicialInt) > 2000);
 		
 		
-		dataInicial = dateFormatDtHr.parse("2020-01-21 20:00:00");
-		dataFinal = dateFormatDtHr.parse("2020-01-21 20:21:00");
+//		//CALCULAR DIFERENÇA ENTRE DUAS DATAS
+//		Date dataInicial, dataFinal;
+//		SimpleDateFormat dateFormatDtHr = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
+//		SimpleDateFormat dateFormatInt = new SimpleDateFormat("HHmmss");
+//		
+//		dataInicial = dateFormatDtHr.parse("2020-01-21 20:00:00");
+//		dataFinal = dateFormatDtHr.parse("2020-01-21 20:00:00");
+//		
+//		LocalDateTime ldtI = dataInicial.toInstant().atZone(ZoneId.systemDefault()).toLocalDateTime();
+//		LocalDateTime ldtF = dataFinal.toInstant().atZone(ZoneId.systemDefault()).toLocalDateTime();
+//		System.out.println(ldtI.until(ldtF, ChronoUnit.MINUTES)); 
 		
-		int dataInicialInt = Integer.valueOf(dateFormatInt.format(dataInicial));
-		int dataFinalInt = Integer.valueOf(dateFormatInt.format(dataFinal));
+		SimpleDateFormat isoFormat = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
+		System.out.println(TimeZone.getDefault());
+		isoFormat.setTimeZone(TimeZone.getTimeZone("UTC"));
+		System.out.println(TimeZone.getDefault());
+		System.out.println(isoFormat.format(new Date()));
 		
-		System.out.println(dataInicialInt);
-		System.out.println(dataFinalInt);
-		System.out.println((dataFinalInt - dataInicialInt));
-		System.out.println((dataFinalInt - dataInicialInt) > 2000);
-		
-		
+//		//ENVIANDO HTML COMO E-MAIL
+//		private boolean enviarEmailHtml(String titulo, String texto, String emailDestino) {
+//			// Sender's email ID needs to be mentioned
+//			String from = "sullyapplication@gmail.com";
+//			final String username = "sullyapplication@gmail.com";//change accordingly
+//			final String password = "cvplrwbfkptsbcap";//change accordingly
+//			Properties props = new Properties();
+//			props.put("mail.host", "smtp.gmail.com");
+//			props.put("mail.port", "587");
+//			props.put("mail.smtp.auth", "true");
+//			props.put("mail.smtp.starttls.enable", "true");
+//			
+//			// Get the Session object.
+//			Session session = Session.getInstance(props,
+//					new javax.mail.Authenticator() {
+//				protected PasswordAuthentication getPasswordAuthentication() {
+//					return new PasswordAuthentication(username, password);
+//				}
+//			});
+//			
+//			try {
+//				// Create a default MimeMessage object.
+//				Message message = new MimeMessage(session);
+//				// Set From: header field of the header.
+//				message.setFrom(new InternetAddress(from));
+//				// Set To: header field of the header.
+//				message.setRecipients(Message.RecipientType.TO,
+//						InternetAddress.parse(emailDestino));
+//				// Set Subject: header field
+//				message.setSubject(titulo);
+//				// Send the actual HTML message, as big as you like
+//				message.setContent(
+//						"<h1><b><center>Teste de envio de HTML</center></b></h1>",
+//						"text/html");
+//				// Send message
+//				Transport.send(message);
+//				log.info("Sent message successfully....");
+//				return true;
+//			} catch (Exception e) {
+//				log.info("Sent message failed....");
+//				System.out.println(e);
+//				return false;
+//			}
+//		}
 	}
 }
