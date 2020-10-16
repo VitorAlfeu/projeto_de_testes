@@ -1,9 +1,15 @@
 package projeto_de_testes;
 
+import java.math.BigDecimal;
+import java.math.MathContext;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
+import java.time.LocalDateTime;
+import java.util.ArrayList;
 import java.util.Date;
+import java.util.List;
 import java.util.TimeZone;
+import java.util.stream.Collectors;
 
 public class Teste {
 	public static void main(String[] args) throws ParseException{
@@ -142,11 +148,11 @@ public class Teste {
 //		LocalDateTime ldtF = dataFinal.toInstant().atZone(ZoneId.systemDefault()).toLocalDateTime();
 //		System.out.println(ldtI.until(ldtF, ChronoUnit.MINUTES)); 
 		
-		SimpleDateFormat isoFormat = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
-		System.out.println(TimeZone.getDefault());
-		isoFormat.setTimeZone(TimeZone.getTimeZone("UTC"));
-		System.out.println(TimeZone.getDefault());
-		System.out.println(isoFormat.format(new Date()));
+//		SimpleDateFormat isoFormat = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
+//		System.out.println(TimeZone.getDefault());
+//		isoFormat.setTimeZone(TimeZone.getTimeZone("UTC"));
+//		System.out.println(TimeZone.getDefault());
+//		System.out.println(isoFormat.format(new Date()));
 		
 //		//ENVIANDO HTML COMO E-MAIL
 //		private boolean enviarEmailHtml(String titulo, String texto, String emailDestino) {
@@ -192,5 +198,49 @@ public class Teste {
 //				return false;
 //			}
 //		}
+		
+//		//String Join
+//		List<String> lstTeste = new ArrayList<>();
+//		lstTeste.add("1");
+//		lstTeste.add("2");
+//		lstTeste.add("3");
+//		
+//		String testeJunto = String.join(", ", lstTeste.stream().collect(Collectors.toList()));
+//		
+//		System.out.println(testeJunto);
+		
+//		BigDecimal a = new BigDecimal("1.6");
+//		BigDecimal b = new BigDecimal("9.2");
+//		BigDecimal r = new BigDecimal("1"); 
+//		r = a.divide(b, MathContext.DECIMAL32);
+//		System.out.println(r);
+		
+//		boolean testeNull;
+//		
+//		String teste = testeNull ? "Sim" : "Nao";
+
+//		//Modificando "Hora", "Minuto" ou "Segundo" de um LocalDateTime
+//		System.out.println(LocalDateTime.now().withHour(0).withMinute(0).withSecond(0).withNano(0));
+//		System.out.println(LocalDateTime.now());
+		
+//		//Verificando qual data é menor
+//		LocalDateTime dataHoraMenor = LocalDateTime.now();
+//		LocalDateTime dataHoraMaior = dataHoraMenor.plusNanos(1);
+//		
+//		if (dataHoraMenor.isAfter(dataHoraMaior)) {
+//			System.out.println("Deu certo!");			
+//		} else {
+//			System.out.println("Deu errado!");
+//		}
+//
+//		if (dataHoraMaior.isAfter(dataHoraMenor)) {
+//			System.out.println("Deu certo!");			
+//		} else {
+//			System.out.println("Deu errado!");
+//		}
+//		
+//		System.out.println(dataHoraMenor);
+//		System.out.println(dataHoraMaior);
+		
 	}
 }
